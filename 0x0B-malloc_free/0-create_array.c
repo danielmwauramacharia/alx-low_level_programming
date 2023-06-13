@@ -1,55 +1,27 @@
-#include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
 
-char *create_array(unsigned int size, char c) {
-    if (size == 0) {
-        return NULL;
-    }
-
-    char *array = malloc(sizeof(char) * size);
-    if (array == NULL) {
-        return NULL; // Failed to allocate memory
-    }
-
-    for (unsigned int i = 0; i < size; i++) {
-        array[i] = c;
-    }
-
-    return array;
-}
-
-void simple_print_buffer(char *buffer, unsigned int size)
+/**
+ * create_array - Create an array of chars and initialize it with a specific char.
+ * @size: The size of the array.
+ * @c: The character to initialize the array with.
+ *
+ * Description: This function dynamically allocates an array of chars with the given size
+ *              and initializes each element of the array with the specified character.
+ *
+ * Return: Pointer to the created array, or NULL if size is 0 or if memory allocation fails.
+ */
+char *create_array(unsigned int size, char c)
 {
-    unsigned int i;
+	char *str;
+	unsigned int i;
 
-    i = 0;
-    while (i < size)
-    {
-        if (i % 10)
-        {
-            printf(" ");
-        }
-        if (!(i % 10) && i)
-        {
-            printf("\n");
-        }
-        printf("0x%02x", buffer[i]);
-        i++;
-    }
-    printf("\n");
-}
+	str = malloc(sizeof(char) * size);
+	if (size == 0 || str == NULL)
+		return (NULL);
 
-int main(void)
-{
-    char *buffer;
+	for (i = 0; i < size; i++)
+		str[i] = c;
 
-    buffer = create_array(98, 'H');
-    if (buffer == NULL)
-    {
-        printf("failed to allocate memory\n");
-        return (1);
-    }
-    simple_print_buffer(buffer, 98);
-    free(buffer);
-    return (0);
+	return (str);
 }
