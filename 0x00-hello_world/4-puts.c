@@ -1,15 +1,14 @@
 #include <stdio.h>
 
 /**
- * main-Entry point of the function
+ * main- A function that uses puts
  *
- * Return :alyways 0 on sucess
- *
+ * Return :alyways 0(success)
  */
 
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle\n");
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
 
