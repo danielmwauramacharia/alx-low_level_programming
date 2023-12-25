@@ -8,18 +8,15 @@
 
 int main(void)
 {
-	int i;
-	char start = 'a';
-	char end = 'f';
-	char ch;
+	char hexDigit;
 
-	for (i = 0; i <= 10; i++)
+	for (hexDigit = '0'; hexDigit <= '9'; hexDigit++)
 {
-		putchar('0' + i);
+		putchar(hexDigit);
 }
-	for (ch = start; ch <= end; ch++)
+	for (hexDigit = 'a'; hexDigit <= 'f'; hexDigit++)
 {
-		putchar(ch);
+		putchar(hexDigit);
 }
 	putchar('\n');
 
