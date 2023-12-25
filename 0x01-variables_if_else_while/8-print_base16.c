@@ -11,6 +11,7 @@ int main(void)
 	int i;
 	char start = 'a';
 	char end = 'f';
+	char ch;
 
 	for (i = 0; i <= 10; i++)
 {
