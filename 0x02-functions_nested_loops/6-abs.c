@@ -2,7 +2,7 @@
 
 /**
   *_abs -gives the absolute value of a number
-  *@int: th data type of argument
+  *@a: th data type of argument
   *
   *Return: the absolute int that is passed
   */
