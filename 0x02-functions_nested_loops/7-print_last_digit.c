@@ -26,6 +26,11 @@ int print_last_digit(int a)
 		_putchar(e + '0');
 		return (e);
 }
+	if (a == 1)
+{
+		_putchar(1 + '0');
+		return (1);
+}
 	else
 {
 		_putchar('0');
