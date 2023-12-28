@@ -16,16 +16,19 @@ int print_last_digit(int a)
 	if (a > 0)
 {
 		c = a % 10;
+		_putchar(c + '0');
 		return (c);
 }
 	if (a < 0)
 {
 		d = (-1 * a);
 		e = d % 10;
+		_putchar(e + '0');
 		return (e);
 }
 	else
 {
+		_putchar('0');
 		return (0);
 }
 }
