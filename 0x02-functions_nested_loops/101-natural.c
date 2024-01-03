@@ -10,6 +10,7 @@ int main(void)
 {
 	int i, mult3, mult5, sum;
 
+	sum = 0;
 	for (i = 1; i < 1024; i++)
 {
 		mult3 = i % 3;
