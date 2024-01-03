@@ -7,24 +7,26 @@
   */
 int main(void)
 {
-	int i, n = 98;
-	long first = 1, second = 2, next;
+	int i, n;
+	unsigned long first = 1, second = 2, next;
 
-	printf("%ld, ", first);
-	printf("%ld, ", second);
+	n = 98;
+
+	printf("%lu, ", first);
+	printf("%lu, ", second);
 
 	for (i = 3; i <= n; i++)
 {
 		next = first + second;
 		if (i < 98)
 {
-			printf("%ld, ", next);
+			printf("%lu, ", next);
 			first = second;
 			second = next;
 }
 		else
 {
-			printf("%ld", next);
+			printf("%lu", next);
 			first = second;
 			second = next;
 }
