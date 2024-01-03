@@ -24,7 +24,7 @@ int main(void)
 			first = second;
 			second = next;
 }
-		else 
+		else
 {
 			printf("%ld", next);
 			first = second;
