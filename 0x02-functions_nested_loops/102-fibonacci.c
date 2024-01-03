@@ -2,7 +2,7 @@
 
 /**
   *main -entry point of our program
-  *the program prints fibonacci number starting from 1and2
+  *
   *Return: 0 success
   */
 int main(void)
@@ -13,14 +13,23 @@ int main(void)
 	first = 1;
 	second = 2;
 	n = 50;
-
-	printf("%ld, %ld, ", first , second);
+	printf("%ld, ", first);
+	printf("%ld, ", second);
 	for (i = 3; i <= n; i++)
 {
 		next = first + second;
-		printf("%ld, ", next);
-		first = second;
-		second = next;
+		if (i < 50)
+{
+			printf("%ld, ", next);
+			first = second;
+			second = next;
+}
+		else 
+{
+			printf("%ld", next);
+			first = second;
+			second = next;
+}
 }
 	printf("\n");
 	return (0);
