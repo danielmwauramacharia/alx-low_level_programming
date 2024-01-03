@@ -7,28 +7,17 @@
   */
 int main(void)
 {
-	int i;
-	long first, second, next, sum;
+	long first = 1, second = 2, next, sum = 0;
 
-	first = 1;
-	second = 2;
-
-	for (i = 1; ; i++)
+	while (first <= 4000000)
 {
+		if (first % 2 == 0)
+{
+			sum += first;
+}
 		next = first + second;
-		if (next <= 4000000)
-{
-			first = second;
-			second = next;
-}
-			if (next % 2 == 0)
-{
-				sum += next;
-}
-		else
-{
-		break;
-}
+		first = second;
+		second = next;
 }
 	printf("%ld\n", sum);
 	return (0);
