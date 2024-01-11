@@ -2,23 +2,25 @@
 
 /**
  * leet - encodes a string into 1337
- * @str: input string
+ * @s: input string
  * Return: pointer to the resulting string
  */
-
-char *leet(char *str)
+char *leet(char *s)
 {
 	int i, j;
-	char leetReplace[] = {'a', 'e', 'o', 't', 'l'};
-	char leetWith[] = {'4', '3', '0', '7', '1'};
+	char leet[] = {'A', 'a', 'E', 'e', 'O', 'o', 'T', 't', 'L', 'l'};
+	char replace[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 {
-		for (j = 0; j < 5; j++)
+		for (j = 0; leet[j] != '\0'; j++)
 {
-			if (str[i] == leetReplace[j] || str[i] == (leetReplace[j] - 'A' + 'a'))
-				str[i] = leetWith[j];
+			if (s[i] == leet[j])
+{
+				s[i] = replace[j];
+				break;
 }
 }
-	return (str);
+}
+	return (s);
 }
