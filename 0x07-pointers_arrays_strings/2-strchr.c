@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stddef.h>
 
 /**
  * _strchr - Locate a character in a string
@@ -16,8 +16,8 @@ char *_strchr(char *s, char c)
 {
 		if (*(s + i) == c)
 {
-		return (s + i);
-		i++;
+			return (s + i);
+			i++;
 }
 }
 	if (*(s + i) == c)
