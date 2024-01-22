@@ -14,6 +14,7 @@ unsigned int _strspn(char *s, char *accept)
 	while (*s)
 {
 		int i = 0;
+
 		prevCount = matchCount;
 		while (*(accept + i) != '\0')
 {
