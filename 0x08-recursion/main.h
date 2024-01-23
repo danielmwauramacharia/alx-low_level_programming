@@ -9,4 +9,7 @@ int _pow_recursion(int x, int y);
 int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int check_prime(int count, int n);
+int is_palindrome(char *s);
+int find_length(char *s);
+int helper_palindrome(char *s, int len, int a);
 #endif
