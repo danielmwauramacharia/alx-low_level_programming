@@ -7,7 +7,7 @@
  * @argv: Array of strings containing the command-line arguments
  *
  * Description: Prints the result of multiplying two numbers.
- * If the program does not receive two arguments, it prints "Error" and returns 1.
+ * If  not two arguments, it prints "Error" and returns 1.
  *
  * Return: 0 on success, 1 on error
  */
