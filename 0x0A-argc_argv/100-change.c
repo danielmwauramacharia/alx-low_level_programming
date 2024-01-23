@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+ * main - Entry point, prints the minimum number of coins for change
+ * @argc: Number of arguments
+ * @argv: Array of argument strings
+ *
+ * Description: Prints the minimum number of coins needed for change
+ * Return: 0 on success, 1 on error
+ */
 int main(int argc, char *argv[])
 {
 	int numQuarters, numDimes, numNickels, numTwoCents, numPennies;
@@ -13,7 +20,7 @@ int main(int argc, char *argv[])
 }
 	else if (atoi(argv[1]) < 0)
 {
- 		printf("0\n");
+		printf("0\n");
 }
 	else
 {
