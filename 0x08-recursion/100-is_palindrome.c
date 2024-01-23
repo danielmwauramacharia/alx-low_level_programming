@@ -1,22 +1,18 @@
 #include "main.h"
-
 /**
  * is_palindrome - Checks if a string is a palindrome.
  * @s: Pointer to a string.
  *
- * Description: Tests if the given string is a palindrome.
- *              Returns 1 if it is a palindrome, 0 otherwise.
+ *Return: s
  */
 int is_palindrome(char *s)
 {
 	return (helper_palindrome(s, find_length(s) - 1, 0));
 }
-
 /**
  * find_length - Computes the length of a string.
  * @s: Pointer to a string.
  *
- * Description: Recursively calculates the length of the string.
  * Return: The length of the string.
  */
 int find_length(char *s)
@@ -26,14 +22,12 @@ int find_length(char *s)
 	else
 		return (0);
 }
-
 /**
  * helper_palindrome - Helper function to check if a string is a palindrome.
  * @s: Pointer to a string.
  * @len: Length of the string.
  * @a: Starting index.
  *
- * Description: Recursively tests conditions to determine if the string is a palindrome.
  * Return: 1 if the string is a palindrome, 0 otherwise.
  */
 int helper_palindrome(char *s, int len, int a)
