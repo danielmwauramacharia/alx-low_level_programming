@@ -12,4 +12,5 @@ int check_prime(int count, int n);
 int is_palindrome(char *s);
 int find_length(char *s);
 int helper_palindrome(char *s, int len, int a);
+int wildcmp(char *s1, char *s2);
 #endif
