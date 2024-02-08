@@ -11,7 +11,7 @@
 int print_last_digit(int n)
 {
 	int last, x = INT_MIN;
-	
+
 	if (n == x)
 {
 		last = INT_MAX % 10;
