@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- *times_table -prints multiplication table of size 9
+ * times_table - Prints the multiplication table of size 9
  */
-
 void times_table(void)
 {
-	int i, j, mult = 0;
+	int i, j, mult;
 
 	for (i = 0; i < 10; i++)
 {
@@ -18,23 +17,9 @@ void times_table(void)
 				_putchar(mult + '0');
 				_putchar(',');
 }
-			else if ((j > 0 && j < 9) && (mult < 10))
-{
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(mult + '0');
-				_putchar(',');
-}
-			else if ((j > 0 && j < 9) && (mult > 9))
-{
-				_putchar(' ');
-				_putchar(mult / 10 + '0');
-				_putchar(mult % 10 + '0');
-				_putchar(',');
-}
 			else
 {
-				if ((j == 9) && (mult < 10))
+				if (mult < 10)
 {
 					_putchar(' ');
 					_putchar(' ');
@@ -42,12 +27,13 @@ void times_table(void)
 }
 				else
 {
-					if ((j == 9) && (mult > 9))
-{
-						_putchar(' ');
-						_putchar(mult / 10 + '0');
-						_putchar(mult % 10 + '0');
+					_putchar(' ');
+					_putchar(mult / 10 + '0');
+					_putchar(mult % 10 + '0');
 }
+				if (j < 9)
+{
+					_putchar(',');
 }
 }
 }
