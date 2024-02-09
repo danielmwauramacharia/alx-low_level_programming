@@ -1,45 +1,56 @@
 #include "main.h"
 
 /**
-  *times_table -produces a timestable of size 9
-  */
-
+ *times_table -prints multiplication table of size 9
+ */
 
 void times_table(void)
 {
-	int i = 0;
-	int j = 0;
-	int a;
+	int i, j, mult = 0;
 
-	for (i = 0; i <= 9; i++)
+	for (i = 0; i < 10; i++)
 {
-		for (j = 0; j <= 9; j++)
+		for (j = 0; j < 10; j++)
 {
-			a = i * j;
-			if (a > 9)
+			mult = i * j;
+			if (j == 0)
 {
-				_putchar(a / 10 + '0');
-				_putchar(a % 10 + '0');
+				_putchar(mult + '0');
+				_putchar(',');
+}
+			else if ((j > 0 && j < 9) && (mult < 10))
+{
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(mult + '0');
+				_putchar(',');
+}
+			else if ((j > 0 && j < 9) && (mult > 9))
+{
+				_putchar(' ');
+				_putchar(mult / 10 + '0');
+				_putchar(mult % 10 + '0');
+				_putchar(',');
 }
 			else
 {
-				if (a < 10)
+				if ((j == 9) && (mult < 10))
 {
 					_putchar(' ');
-}
-				_putchar(a + '0');
-}
-			if (j <9)
-{
-				_putchar(',');
-}
-				if (j > 0 && j < 9)
-{
 					_putchar(' ');
+					_putchar(mult + '0');
 }
-
+				else
+{
+					if ((j == 9) && (mult > 9))
+{
+						_putchar(' ');
+						_putchar(mult / 10 + '0');
+						_putchar(mult % 10 + '0');
+}
+}
+}
 }
 		_putchar('\n');
 }
-	_putchar('\n');
 }
