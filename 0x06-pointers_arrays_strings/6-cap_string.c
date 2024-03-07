@@ -1,32 +1,31 @@
 #include "main.h"
 
 /**
- * cap_string - capitalizes all words of a string
- * @str: the input string
- * Return: pointer to the resulting string
- */
-char *cap_string(char *str)
+  *cap_string - function that capitalizes all words of a string
+  *@s: The string
+  *Return: A pointer to the string
+  */
+char *cap_string(char *s)
 {
-	int i = 0;
+	char *ptr = s;
 
-	if (str[i] >= 'a' && str[i] <= 'z')
+	if (*ptr != '\0' && (*ptr >= 97 && *ptr <= 122))
+		*ptr = *ptr - 32;
+	ptr++;
+	while (*ptr != '\0')
 {
-		str[i] = str[i] - ('a' - 'A');
-}
-	while (str[i] != '\0')
+		if (*ptr == ' ' || *ptr == 9 || *ptr == 10 || *ptr == ','
+			|| *ptr == ';' || *ptr == '.' || *ptr == '!' ||
+			*ptr == '?' || *ptr == '"' || *ptr == '(' ||
+			*ptr == ')' || *ptr == '{' || *ptr == '}')
 {
-		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
-			str[i] == ',' || str[i] == ';' || str[i] == '.' || str[i] == '!' ||
-			str[i] == '?' || str[i] == '"' || str[i] == '(' || str[i] == ')' ||
-			str[i] == '{' || str[i] == '}')
-{
-			i++;
-			if (str[i] >= 'a' && str[i] <= 'z')
-{
-				str[i] = str[i] - ('a' - 'A');
+			ptr++;
+			if (*ptr >= 97 && *ptr <= 122)
+				*ptr = *ptr - 32;
+			else
+				continue;
 }
+		ptr++;
 }
-	i++;
-}
-	return (str);
+	return (s);
 }
