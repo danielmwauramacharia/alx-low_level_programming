@@ -1,42 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctype.h>
 /**
- * main - Entry point, adds positive numbers
- * @argc: Number of arguments
- * @argv: Array of argument strings
- *
- * Description: Adds positive numbers and prints the result
- * Return: 0 on success, 1 on error
- */
+  *main -Entry point of the program
+  *@argc: counts the arguments passed
+  *@argv: Stores the arguments in an array of string pointer
+  *
+  *Description: adds arguments if they are digits and return sum
+  *Return: 0 success, 1 for fail
+  */
 int main(int argc, char *argv[])
 {
-	int index, charIndex, result;
+	int i, j, sum = 0;
 
-	result = 0;
 	if (argc > 1)
 {
-		for (index = 1; index < argc; index++)
+		for  (i = 1; i < argc; i++)
 {
-			for (charIndex = 0; argv[index][charIndex] != '\0'; charIndex++)
+			for (j = 0; argv[i][j] != '\0'; j++)
 {
-				if (argv[index][charIndex] >= '0' && argv[index][charIndex] <= '9')
-{
+				if (isdigit(argv[i][j]))
 					continue;
-}
 				else
 {
 					printf("Error\n");
 					return (1);
 }
 }
-			result += atoi(argv[index]);
+			sum = sum + atoi(argv[i]);
 }
-			printf("%d\n", result);
+		printf("%d\n", sum);
 }
 	else
-{
-		printf("0\n");
-}
+		printf("%d\n", 0);
 	return (0);
 }
