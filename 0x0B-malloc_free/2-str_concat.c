@@ -17,15 +17,20 @@ char *str_concat(char *s1, char *s2)
 	int count1 = 0, count2 = 0, j = 0, k = 0, l = 0;
 	char *ptr;
 
-	if (s1 == NULL && s2 == NULL)
+/*	if (s1 == NULL && s2 == NULL)
 {
 		a = 1;
 		n = 1;
-}
+}*/
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+	if (s1 == "" && s2 == "")
+{
+		a = 1;
+		n = 1;
+}
 	while (s1[count1] != '\0')
 		count1++;
 	while (s2[count2] != '\0')
@@ -54,13 +59,13 @@ char *str_concat(char *s1, char *s2)
 }
 	if (b)
 {
-		for (i = 0; i < n; i++)
+		for (i = 0; i < count2; i++)
 			*(ptr + i) = s2[i];
 		*(ptr + i) = '\0';
 }
 	if (c)
 {
-		for (i = 0; i < n; i++)
+		for (i = 0; i < count1; i++)
 			*(ptr + i) = s1[i];
 		*(ptr + i) = '\0';
 }
